@@ -1,9 +1,8 @@
-import {  useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function CardDetails() {
-  const {id} = useParams();
+  const { id } = useParams();
   const [data, setData] = useState<any>([]);
 
   useEffect(() => {
@@ -16,33 +15,18 @@ function CardDetails() {
   }, []);
   console.log(data.reviews);
   return (
-    <div className="product">
+    <div className='product'>
       <div>{id}</div>
       <span>
-        <h4 className="detailsTitle">hello</h4>
+        <h4 className='detailsTitle'>hello</h4>
       </span>
-      <img className="detailsImage" src={data.img} alt="" />
+      <img className='detailsImage' src={data.img} alt='' />
       {/* Notice the "Price: $". do not edit it. */}
-      <span className="detailsPrice">Price: ${data.price}</span>
-      <span className="detailsPrice"></span>
+      <span className='detailsPrice'>Price: ${data.price}</span>
+      <span className='detailsPrice'></span>
       <div>
         <h5>Reviews:</h5>
-        {/* Iterate over reviews and populate review like: 
-        
-        <div className="review">
-          <span className="reviewBy">UserName1234</span>
-          <span className="reviewDesc">This product is really good etc....</span>
-        </div>
-        
-        */}
-        {/* {
-          data.reviews.map((e:any) => (
-            <div key={e.id} className="review">
-            <span className="reviewBy">{e.by}</span>
-            <span className="reviewDesc">{e.review}</span>
-          </div>
-          ))
-        } */}
+        {/* Iterate over reviews and populate review like:*/}
       </div>
     </div>
   );

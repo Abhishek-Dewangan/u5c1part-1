@@ -36,14 +36,6 @@ function Card(d:any) {
         </button>
         )
       }
-     
-      {/*
-      <div className="itemInCart">Item Already in cart</div> 
-       OR
-      <button className="productAddtoCart">
-        Add to cart
-      </button>
-      */}
     </div>
   );
 }
