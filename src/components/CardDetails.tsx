@@ -16,7 +16,6 @@ function CardDetails() {
   console.log(data.reviews);
   return (
     <div className='product'>
-      <div>{id}</div>
       <span>
         <h4 className='detailsTitle'>hello</h4>
       </span>
@@ -26,7 +25,13 @@ function CardDetails() {
       <span className='detailsPrice'></span>
       <div>
         <h5>Reviews:</h5>
-        {/* Iterate over reviews and populate review like:*/}
+        {/* Iterate over reviews and populate review like:  */}
+        {data.reviews?.map((e: any) => (
+          <div key={e.id} className='review'>
+            <span className='reviewBy'>{e.by}</span>
+            <span className='reviewDesc'>{e.review}</span>
+          </div>
+        ))}
       </div>
     </div>
   );

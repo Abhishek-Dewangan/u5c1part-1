@@ -24,8 +24,9 @@ function Checkout() {
       <div className='checkoutWrapper'>
         {cartProducts.map((e: any) => (
           <div className='checkoutItem'>
-            <span>{e.product_name}</span>
-            <span>${e.price}</span>
+            <span>
+              {e.product_name} ${e.price}
+            </span>
           </div>
         ))}
       </div>

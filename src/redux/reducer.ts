@@ -1,5 +1,5 @@
 
-import {  GET_DATA } from "./action"
+import {  ADD_CART, GET_DATA } from "./action"
 import { CART_DATA } from "./action"
 
 
@@ -14,6 +14,11 @@ export const reducer = (state = initState, action:any) => {
              ...state,  
              products: action.payload
          }
+         case ADD_CART:
+             return{
+                 ...state,
+                 cartProducts: action.payload,
+             }
          case CART_DATA:
             return {
               ...state,
